@@ -15,41 +15,41 @@ import LavaPacketUtils from 'lava-packet-utils';
 
 
 
-#### ----------------------
-
-var params = LavaPacketUtils.getLavaParamsFromData(
-    methodName,
-    relayAuthority,
-    from,
-    to,
-    lavaContractAddress,
-    transferAmountRaw,
-    relayerRewardRaw,
-    expires,
-    nonce);
 
 
-
-var typedDataHash = LavaPacketUtils.getLavaTypedDataFromParams(
-    methodName,
-    relayAuthority,
-    from,
-    to,
-    lavaContractAddress,
-    transferAmountRaw,
-    relayerRewardRaw,
-    expires,
-    nonce);
-
-
-var signature = LavaPacketUtils.signTypedData(typedDataHash,privateKey);
+    var params = LavaPacketUtils.getLavaParamsFromData(
+        methodName,
+        relayAuthority,
+        from,
+        to,
+        lavaContractAddress,
+        transferAmountRaw,
+        relayerRewardRaw,
+        expires,
+        nonce);
 
 
-var packetData = getLavaPacket(
-  methodName,relayAuthority,from,to,wallet,tokens,
-  relayerRewardTokens,expires,nonce,signature);
+
+    var typedDataHash = LavaPacketUtils.getLavaTypedDataFromParams(
+        methodName,
+        relayAuthority,
+        from,
+        to,
+        lavaContractAddress,
+        transferAmountRaw,
+        relayerRewardRaw,
+        expires,
+        nonce);
 
 
-var hasValidSig = LavaPacketUtils.lavaPacketHasValidSignature(packetData);
+    var signature = LavaPacketUtils.signTypedData(typedDataHash,privateKey);
 
-var web3Method = LavaPacketUtils.getContractLavaMethod(lavaContractInstance, packetData);
+
+    var packetData = getLavaPacket(
+      methodName,relayAuthority,from,to,wallet,tokens,
+      relayerRewardTokens,expires,nonce,signature);
+
+
+    var hasValidSig = LavaPacketUtils.lavaPacketHasValidSignature(packetData);
+
+    var web3Method = LavaPacketUtils.getContractLavaMethod(lavaContractInstance, packetData);
