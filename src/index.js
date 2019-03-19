@@ -95,7 +95,7 @@ module.exports = class LavaPacketUtils  {
 
    static getLavaTypedDataHash(typedData,types)
    {
-     var typedDataHash = ethjsutil.sha3(
+     var typedDataHash = ethjsutil.keccak256(
          Buffer.concat([
              Buffer.from('1901', 'hex'),
              EIP712Helper.structHash('EIP712Domain', typedData.domain, types),

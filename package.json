@@ -1,19 +1,19 @@
 {
   "name": "lava-packet-utils",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A library of helper methods for the Lava Packet protocol on the Ethereum Network for conducting fee-less transfers with EIP712 signatures.  ",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "ethereum",
     "web3"
   ],
   "repository": {
-      "type": "git",
-      "url": "https://github.com/admazzola/lava-packet-utils.git"
-    },
+    "type": "git",
+    "url": "https://github.com/admazzola/lava-packet-utils.git"
+  },
   "author": "infernal_toast",
   "license": "MIT",
   "dependencies": {
@@ -21,5 +21,8 @@
     "ethereumjs-abi": "^0.6.6",
     "ethereumjs-util": "^6.1.0",
     "randomhex": "^0.1.5"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2"
   }
 }
