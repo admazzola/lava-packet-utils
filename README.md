@@ -4,6 +4,7 @@ A library of helper methods for the Lava Packet protocol on the Ethereum Network
 
 
 ## Using this library
+npm install lava-packet-utils
 
 import LavaPacketUtils from 'lava-packet-utils';
 
