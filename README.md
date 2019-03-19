@@ -4,11 +4,18 @@ A library of helper methods for the Lava Packet protocol on the Ethereum Network
 
 
 ## Using this library
+
 npm install lava-packet-utils
 
 import LavaPacketUtils from 'lava-packet-utils';
 
 
+* Please see the tests folder for an example of how to sign and verify lava packet signatures
+
+
+
+
+#### ----------------------
 
 var params = LavaPacketUtils.getLavaParamsFromData(
     methodName,
@@ -20,7 +27,7 @@ var params = LavaPacketUtils.getLavaParamsFromData(
     relayerRewardRaw,
     expires,
     nonce);
- 
+
 
 
 var typedDataHash = LavaPacketUtils.getLavaTypedDataFromParams(
