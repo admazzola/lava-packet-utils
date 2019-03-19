@@ -10,6 +10,10 @@
     "ethereum",
     "web3"
   ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/admazzola/lava-packet-utils.git"
+    },
   "author": "infernal_toast",
   "license": "MIT",
   "dependencies": {
