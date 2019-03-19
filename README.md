@@ -20,9 +20,7 @@ var params = LavaPacketUtils.getLavaParamsFromData(
     relayerRewardRaw,
     expires,
     nonce);
-
-
-
+ 
 
 
 var typedDataHash = LavaPacketUtils.getLavaTypedDataFromParams(
@@ -42,24 +40,7 @@ var signature = LavaPacketUtils.signTypedData(typedDataHash,privateKey);
 
 var packetData = getLavaPacket(
   methodName,relayAuthority,from,to,wallet,tokens,
-  relayerRewardTokens,expires,nonce,signature)
-{
-
-  return {
-    methodName:methodName,
-    relayAuthority:relayAuthority,
-    from: from,
-    to: to,
-    wallet:wallet,
-    tokens:tokens,
-    relayerRewardTokens:relayerRewardTokens,
-    expires:expires,
-    nonce:nonce,
-    signature:signature
-  }
-
-
-}
+  relayerRewardTokens,expires,nonce,signature);
 
 
 var hasValidSig = LavaPacketUtils.lavaPacketHasValidSignature(packetData);
